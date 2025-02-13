@@ -1,6 +1,5 @@
 import traceback
 from flask import Flask, request, render_template, jsonify, Response, copy_current_request_context
-from flask_executor import Executor
 import os
 import uuid
 import hashlib
@@ -22,7 +21,7 @@ app = Flask(__name__, static_url_path='/static')
 #############################################################################################################
 # OpenAI API Key 
             
-OpenAI.api_key = os.getenv("OPENAI_API_KEY")
+OpenAI.api_key = "sk-proj-"
 client = OpenAI(api_key=OpenAI.api_key)
 
 
@@ -241,14 +240,7 @@ def generate_video_route():
              'local_dir': upload_folder,
              'bucket': SOURCE_BUCKET_NAME})
 
-    @copy_current_request_context
-    def task():
-        return generate_video(session_data, images)
-
-    future = executor.submit(task)
-    app.logger.debug('Task submitted: %s', future)
-    return jsonify({'status': 'Task started', 'session_id': session_data['unique_prefix']}), 202
-
+ 
 
 @app.route('/api/video-callback', methods=['POST'])
 def video_callback():
