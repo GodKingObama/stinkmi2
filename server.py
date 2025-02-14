@@ -19,7 +19,7 @@ app = Flask(__name__, static_url_path='/static')
 #############################################################################################################
 # OpenAI API Key 
             
-OpenAI.api_key = "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"
+OpenAI.api_key = "sk-proj-"
 client = OpenAI(api_key=OpenAI.api_key)
 
 
