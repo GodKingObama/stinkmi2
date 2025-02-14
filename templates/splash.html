@@ -7,15 +7,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunfire</title>
+    <title>Mimitopia</title>
 </head>
 
 <!-- Font i'm using is "outfit"' --> 
-<body>
-    <div class="intro"> </div>
-    <div class="logo-header">
-By clicking Accept you agree to our terms and conditions as well as cookies.
-        <a href="{{ url_for('index') }}"><button>Accept</button></a>
+<body class="StreetBG">
+<div class="fname">
+    <a href="{{ url_for('index') }}"><form>
+    <form id ="fname" style="display: none;"><br>
+    <input type="text" id="fname" name="fname"><br>
+    <a href="{{ url_for('index') }}"><input type = "submit" value = "Submit">Submit1</input></a>
+    </form></a>
+</div>
+    <div class ="intro"></div>
+    <div class="button">
+        <a href="{{ url_for('index') }}"><button id="button" style='display: none;'>Accept</button></a>
 
     </div>
 
@@ -69,4 +75,17 @@ By clicking Accept you agree to our terms and conditions as well as cookies.
                 })
             </script>
 </body>
+<script>
+   // setTimeout will trigger a function after a specified delay (in milliseconds)
+   setTimeout(function(){ 
+        // When your timeout has finished, find your button and show it
+        document.getElementById('button').style.display = 'block';
+        document.getElementById('button').classList.add = 'button';
+        document.getElementById('fname').style.display = 'block';
+        document.getElementById('fname').classList.add = 'fname';
+
+
+
+   }, 10 * 500);
+</script>
 </html>

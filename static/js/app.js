@@ -4,6 +4,10 @@ let logo = document.querySelector('.logo-header')
 
 let logoSpan = document.querySelectorAll('.logo')
 
+let button = document.querySelector('.button')
+
+let nameInput = document.querySelectorAll('.nameInput')
+
 window.addEventListener('DOMContentLoaded', () => {
 
     setTimeout(() => {

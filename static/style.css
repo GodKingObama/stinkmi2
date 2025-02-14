@@ -1,11 +1,8 @@
 
-* {
+html, body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Courier", monospace;
+    height: 100%;
 }
-
 
 header {
     position: relative;
@@ -81,7 +78,7 @@ img {
 
     .intro {
     position: fixed;
-    background-image:url("pinkcloud.png");
+    background-image:url("mimigif.gif");
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 1;
@@ -89,10 +86,48 @@ img {
     top: 0%;
     width: 100%;
     height: 100vh;
-    transition: 2s;
+    transition-delay:1s;
+}
+/*Mimitopia specific*/
+.NPCchat {
+    font-family: Palatino, serif;
+    position: absolute;
+    font-size: 26pt;
+    line-height: 1.6;
+    margin: 0 auto;
+    width: 60%;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: pink;
+    bottom:0%;
+    right:60vh;
+}
+.StreetBG {
+    background:url("welcomemimi2.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.fname {
+    width: 25%;
+    position: absolute;
+    bottom: 40%;
+    right: 39%;
 }
 
-
+/* snake */
+/* Write CSS Here */
+body {
+    text-align: center;
+}
+.snaketext {
+    font-size: 40px;
+    font-weight: bold;
+    color: pink;
+}
 
 
 .logo-header {
@@ -239,15 +274,6 @@ img {
 }
 /* CSS from original Sunfire website. 
     Define a color palette using CSS variables for consistency */
-:root {
-    --primary-color: #4CAF50;
-    --secondary-color: #ffffff;
-    --accent-color: #ff5722;
-    --text-color: #333;
-    --background-color: #f9f9f9;
-    --card-background: #ffffff;
-    --shadow-color: rgba(0, 0, 0, 0.1);
-}
 
 
 .chat-container {
@@ -390,19 +416,25 @@ textarea {
 }
 
 button {
-    margin: 5px;
-    padding: 8px 12px;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+  bottom: 33%;
+  position: absolute;
+  right: 50%;
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 12px px;
+  font-size: 16px;
+  cursor: pointer;
+  color: black;
+  border-radius: 10px;
 }
 
     button:disabled {
         background-color: #ccc;
         cursor: not-allowed;
+    }
+    button:hover {
+        background-color: green;
     }
 
     button:hover:not(:disabled) {
