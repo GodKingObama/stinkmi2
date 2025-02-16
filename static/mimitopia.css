@@ -1,0 +1,19 @@
+.locationButtons {
+    margin: 3%;
+    background-color:pink;
+    color: white;
+    text-align: center;
+    height: 10%;
+    width: 15%;
+    
+}
+.startBody {
+    cursor: url('paw.png'), auto;
+
+}
+
+
+
+.locationButtons:hover {
+    background-color: green;
+}

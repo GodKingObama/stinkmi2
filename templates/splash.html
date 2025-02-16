@@ -12,16 +12,9 @@
 
 <!-- Font i'm using is "outfit"' --> 
 <body class="StreetBG">
-<div class="fname">
-    <a href="{{ url_for('index') }}"><form>
-    <form id ="fname" style="display: none;"><br>
-    <input type="text" id="fname" name="fname"><br>
-    <a href="{{ url_for('index') }}"><input type = "submit" value = "Submit">Submit1</input></a>
-    </form></a>
-</div>
     <div class ="intro"></div>
     <div class="button">
-        <a href="{{ url_for('index') }}"><button id="button" style='display: none;'>Accept</button></a>
+        <a href="{{ url_for('start') }}"><button id="button" style='display: none;'>Accept</button></a>
 
     </div>
 
@@ -84,8 +77,6 @@
         document.getElementById('fname').style.display = 'block';
         document.getElementById('fname').classList.add = 'fname';
 
-
-
-   }, 10 * 500);
+   }, 10 * 6000);
 </script>
 </html>

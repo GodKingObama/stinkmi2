@@ -126,7 +126,9 @@ def finished_script():
         return jsonify({'response': response}) 
         
     return render_template('chatgpt.html')
-
+@app.route("/start/")
+def start():
+    return render_template('start.html')
 
 @app.route('/about/')
 def about():
