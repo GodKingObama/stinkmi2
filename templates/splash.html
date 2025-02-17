@@ -13,10 +13,12 @@
 <!-- Font i'm using is "outfit"' --> 
 <body class="StreetBG">
     <div class ="intro"></div>
-    <div class="button">
-        <a href="{{ url_for('start') }}"><button id="button" style='display: none;'>Accept</button></a>
+    <div class="button-container" id = 'button_container' style='display:none;'>
+        <a href="{{ url_for('start') }}"><button class='box-button' id="button" style='display: none;'>Yup, that's me! I am Stinkmi Tran, mind showing me around?</button></a>
+        <a href="{{ url_for('start') }}"><button class = 'box-button' id="button2" style='display: none;' >What no i'm not Stinkmi, that's damn dirty Michael Propaganda</button></a>
 
     </div>
+
 
 
             <script>
@@ -73,10 +75,13 @@
    setTimeout(function(){ 
         // When your timeout has finished, find your button and show it
         document.getElementById('button').style.display = 'block';
-        document.getElementById('button').classList.add = 'button';
-        document.getElementById('fname').style.display = 'block';
-        document.getElementById('fname').classList.add = 'fname';
+        document.getElementById('button').classList.add = 'box-button';
+        document.getElementById('button2').style.display = 'block';
+        document.getElementById('button2').classList.add = 'box-button';
+        document.getElementById('button_container').style.display = 'flex';
+        document.getElementById('button_container').classList.add = 'button_container';
 
-   }, 10 * 6000);
+
+   }, 1000 * 21);
 </script>
 </html>

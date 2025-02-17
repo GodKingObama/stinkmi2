@@ -78,17 +78,33 @@ img {
 
     .intro {
     position: fixed;
-    background-image:url("mimigif.gif");
+    background-image:url("10swelcome.gif");
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 1;
     left: 0%;
     top: 0%;
     width: 100%;
-    height: 100vh;
-    transition-delay:13s;
+    height: 100%;
+    transition-delay:6.5s;
 }
 /*Mimitopia specific*/
+.button-container {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    background-color: pink;
+    position: absolute;
+    top: 40%;
+    width: 40%;
+    height: 25%;
+    right: 30%;
+    border-style: dashed;
+    border-color:#fff;
+    border-block-width: 5px;
+    border-block-color: white;
+}
+  
 .NPCchat {
     font-family: Palatino, serif;
     position: absolute;
@@ -105,7 +121,7 @@ img {
     right:60vh;
 }
 .StreetBG {
-    background:url("stinkmiwelcome.gif");
+    background:url("open1.gif");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -117,7 +133,18 @@ img {
     bottom: 40%;
     right: 39%;
 }
-
+.box-button {
+    background-color: floralwhite;
+    white-space: normal;
+    word-wrap: break-word;
+    width: auto;
+    height: 100%;
+    justify-self: center;
+    border: 2px solid lightpink;
+    border-radius:15px;
+    padding: 12px px;
+    font-size: 1.1rem;
+}
 /* snake */
 /* Write CSS Here */
 body {
@@ -413,167 +440,4 @@ textarea {
 
 .dragging {
     opacity: 0.5;
-}
-
-button {
-  bottom: 33%;
-  position: absolute;
-  right: 50%;
-  border: 2px solid black;
-  background-color: white;
-  color: black;
-  padding: 12px px;
-  font-size: 16px;
-  cursor: pointer;
-  color: black;
-  border-radius: 10px;
-}
-
-    button:disabled {
-        background-color: #ccc;
-        cursor: not-allowed;
-    }
-    button:hover {
-        background-color: green;
-    }
-
-    button:hover:not(:disabled) {
-        background-color: var(--accent-color);
-        transform: translateY(-2px);
-    }
-
-    button.move-left, button.move-right {
-        margin: 0;
-        padding: 5px 10px;
-        width: 48%;
-    }
-
-.image-container .button-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-#main-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-#left-panel {
-    flex: 1;
-}
-
-#right-panel {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#results-area {
-    width: 80%;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px var(--shadow-color);
-    background-color: var(--card-background);
-}
-
-#log-container {
-    font-family: monospace;
-    white-space: pre-wrap;
-    background-color: #e0f7fa;
-    padding: 10px;
-    border-radius: 4px;
-    max-height: 150px;
-    overflow-y: auto;
-    margin-bottom: 20px;
-}
-
-.popup {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-}
-
-.popup-content {
-    background-color: var(--card-background);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px var(--shadow-color);
-    position: relative;
-    width: 80%;
-    max-width: 700px;
-    max-height: 90vh; /* Ensure the content doesn't exceed the viewport height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: var(--text-color);
-    font-size: 24px;
-    cursor: pointer;
-}
-
-#generated-video {
-    width: 100%;
-    border-radius: 4px;
-    object-fit: contain;
-}
-
-button[type="submit"] {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-    button[type="submit"]:hover {
-        background-color: var(--accent-color);
-    }
-
-#progressBarContainer {
-    display: none;
-    width: 200px; /* Full width of the progress bar */
-    height: 10px; /* Height of the progress bar */
-    background-color: var(--background-color); /* Background color of the container */
-    border: 1px solid #ccc; /* Border of the container */
-    position: relative; /* Relative positioning for the progress bar */
-    overflow: hidden; /* Hide overflow to make the animation look good */
-}
-
-#progressBar {
-    width: 10px; /* Initial width of the progress bar */
-    height: 100%; /* Full height of the container */
-    background-color: var(--accent-color); /* Color of the progress bar */
-    position: absolute; /* Absolute positioning within the container */
-    animation: pulse 1s ease-in-out infinite; /* Add pulsing animation */
-}
-
-@keyframes pulse {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.5;
-    }
-
-    100% {
-        opacity: 1;
-    }
 }
