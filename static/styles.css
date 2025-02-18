@@ -509,14 +509,4 @@ label {
     align-items: center;
 }
 
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: var(--text-color);
-    font-size: 24px;
-    cursor: pointer;
-}
 
-
-}
